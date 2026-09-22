@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>unre4ls apartment</title>
+  <style>
+    :root{--bg:#f5f5f7;--card:#fff;--text:#171717;--muted:#707070;--accent:#111;--line:#e6e6e6}
+    body.dark{--bg:#101010;--card:#1c1c1e;--text:#f5f5f7;--muted:#aaa;--accent:#fff;--line:#303033}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;transition:.25s}
+    .wrap{max-width:1050px;margin:auto;padding:22px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:70px}
+    .brand{font-weight:700;letter-spacing:-.5px}.controls{display:flex;gap:8px;flex-wrap:wrap}
+    button,a{border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 14px;border-radius:999px;text-decoration:none;cursor:pointer}
+    .hero{padding:35px 0 70px}.eyebrow{color:var(--muted);font-size:14px}.hero h1{font-size:clamp(44px,8vw,92px);letter-spacing:-5px;line-height:.98;margin:18px 0}
+    .hero p{max-width:540px;color:var(--muted);font-size:18px;line-height:1.5}
+    .primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+    section{margin:35px 0 65px} h2{font-size:32px;letter-spacing:-1px} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;min-height:160px}
+    .icon{font-size:27px}.card h3{margin:22px 0 8px}.card p{color:var(--muted);line-height:1.45}
+    .notice{border-radius:24px;background:var(--card);border:1px solid var(--line);padding:24px;color:var(--muted);line-height:1.6}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:14px}
+    @media(max-width:600px){nav{margin-bottom:35px}.hero h1{letter-spacing:-2px}.hero{padding-top:10px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">unre4ls apartment</div>
+      <div class="controls">
+        <button onclick="setLang('ru')">RU</button><button onclick="setLang('en')">EN</button><button onclick="setLang('lv')">LV</button>
+        <button onclick="document.body.classList.toggle('dark')" aria-label="Toggle dark mode">◐</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="hero">
+        <div class="eyebrow" data="eyebrow">YOUR LOCAL GUIDE</div>
+        <h1 data="title">Добро пожаловать в UNRE4LS HOUS BROU.</h1>
+        <p data="intro">Всё, что нужно для комфортного проживания: полезные места, рекомендации и информация о квартире — в одном месте.</p>
+        <a class="primary" href="#guide" data="button">Исследовать рядом ↓</a>
+      </div>
+
+      <section id="guide">
+        <h2 data="nearbyTitle">Рядом с вами</h2>
+        <div class="grid">
+          <article class="card"><div class="icon">🍽️</div><h3 data="restaurant">Рестораны и кафе</h3><p data="restaurantText">Места для завтрака, ужина и кофе. Здесь появятся ваши рекомендации.</p><a href="#" data="openMap">Открыть карту ↗</a></article>
+          <article class="card"><div class="icon">🛒</div><h3 data="shops">Магазины</h3><p data="shopsText">Супермаркеты, небольшие магазины и всё необходимое рядом.</p><a href="#" data="openMap2">Найти рядом ↗</a></article>
+          <article class="card"><div class="icon">📍</div><h3 data="places">Что посмотреть</h3><p data="placesText">Интересные места, прогулки и идеи для свободного времени.</p><a href="#" data="openMap3">Открыть карту ↗</a></article>
+        </div>
+      </section>
+
+      <section>
+        <h2 data="apartmentTitle">О квартире</h2>
+        <div class="grid">
+          <article class="card"><div class="icon">📶</div><h3 data="wifi">Wi‑Fi</h3><p data="wifiText">Добавьте здесь название сети и пароль.</p></article>
+          <article class="card"><div class="icon">🔑</div><h3 data="rules">Инструкции</h3><p data="rulesText">Заселение, выезд, техника и правила проживания.</p></article>
+          <article class="card"><div class="icon">💬</div><h3 data="contact">Связь с хозяином</h3><p data="contactText">Если что-то понадобится — напишите мне.</p><a href="mailto:YOUR_EMAIL@example.com" data="message">Написать ↗</a></article>
+        </div>
+      </section>
+
+      <section>
+        <h2 data="recommendTitle">От хозяина</h2>
+        <div class="notice" data="recommendText">Здесь будут ваши личные советы: любимый ресторан, лучший кофе, красивые места и полезные лайфхаки для гостей.</div>
+      </section>
+    </main>
+
+    <footer>© unre4ls apartment · <span data="footer">Сделано для комфортного пребывания</span></footer>
+  </div>
+
+<script>
+const texts={
+ru:{eyebrow:"ВАШ ЛОКАЛЬНЫЙ ГИД",title:"Добро пожаловать.",intro:"Всё, что нужно для комфортного проживания: полезные места, рекомендации и информация о квартире — в одном месте.",button:"Исследовать рядом ↓",nearbyTitle:"Рядом с вами",restaurant:"Рестораны и кафе",restaurantText:"Места для завтрака, ужина и кофе. Здесь появятся ваши рекомендации.",shops:"Магазины",shopsText:"Супермаркеты, небольшие магазины и всё необходимое рядом.",places:"Что посмотреть",placesText:"Интересные места, прогулки и идеи для свободного времени.",openMap:"Открыть карту ↗",openMap2:"Найти рядом ↗",openMap3:"Открыть карту ↗",apartmentTitle:"О квартире",wifi:"Wi‑Fi",wifiText:"Добавьте здесь название сети и пароль.",rules:"Инструкции",rulesText:"Заселение, выезд, техника и правила проживания.",contact:"Связь с хозяином",contactText:"Если что-то понадобится — напишите мне.",message:"Написать ↗",recommendTitle:"От хозяина",recommendText:"Здесь будут ваши личные советы: любимый ресторан, лучший кофе, красивые места и полезные лайфхаки для гостей.",footer:"Сделано для комфортного пребывания"},
+en:{eyebrow:"YOUR LOCAL GUIDE",title:"Welcome.",intro:"Everything you need for a comfortable stay: local places, recommendations and apartment information — all in one place.",button:"Explore nearby ↓",nearbyTitle:"Near you",restaurant:"Restaurants & cafés",restaurantText:"Places for breakfast, dinner and coffee. Your recommendations will appear here.",shops:"Shops",shopsText:"Supermarkets, small stores and everyday essentials nearby.",places:"Things to do",placesText:"Interesting places, walks and ideas for your free time.",openMap:"Open map ↗",openMap2:"Find nearby ↗",openMap3:"Open map ↗",apartmentTitle:"About the apartment",wifi:"Wi‑Fi",wifiText:"Add your network name and password here.",rules:"Instructions",rulesText:"Check-in, check-out, appliances and house rules.",contact:"Contact the host",contactText:"If you need anything, send me a message.",message:"Message ↗",recommendTitle:"Host recommendations",recommendText:"Your personal tips: a favourite restaurant, best coffee, beautiful places and useful guest tips.",footer:"Made for a comfortable stay"},
+lv:{eyebrow:"JŪSU VIETĒJAIS CEĻVEDIS",title:"Laipni lūdzam.",intro:"Viss ērtai uzturēšanās reizei: tuvākās vietas, ieteikumi un informācija par dzīvokli — vienuviet.",button:"Izpētīt apkārtni ↓",nearbyTitle:"Jums tuvumā",restaurant:"Restorāni un kafejnīcas",restaurantText:"Vietas brokastīm, vakariņām un kafijai. Šeit būs jūsu ieteikumi.",shops:"Veikali",shopsText:"Lielveikali, mazie veikali un ikdienai nepieciešamais.",places:"Ko apskatīt",placesText:"Interesantas vietas, pastaigas un idejas brīvajam laikam.",openMap:"Atvērt karti ↗",openMap2:"Meklēt tuvumā ↗",openMap3:"Atvērt karti ↗",apartmentTitle:"Par dzīvokli",wifi:"Wi‑Fi",wifiText:"Šeit pievienojiet tīkla nosaukumu un paroli.",rules:"Instrukcijas",rulesText:"Ierašanās, izrakstīšanās, tehnika un uzturēšanās noteikumi.",contact:"Saziņa ar saimnieku",contactText:"Ja nepieciešama palīdzība, uzrakstiet man.",message:"Rakstīt ↗",recommendTitle:"Saimnieka ieteikumi",recommendText:"Jūsu personīgie ieteikumi: iecienītākais restorāns, labākā kafija, skaistas vietas un noderīgi padomi viesiem.",footer:"Radīts ērtai uzturēšanās reizei"}};
+function setLang(lang){document.querySelectorAll("[data]").forEach(el=>{const key=el.getAttribute("data");if(texts[lang][key])el.textContent=texts[lang][key]})}
+</script>
+</body>
+</html>
