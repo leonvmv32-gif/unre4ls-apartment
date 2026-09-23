@@ -6,11 +6,8 @@
   <title>unre4ls apartment</title>
   <style>
     :root{--bg:#f5f5f7;--card:#fff;--text:#000000;--muted:#707070;--accent:#111;--line:#e6e6e6}
-    @media(max-width:600px){
-  body{
-    background-size:auto 100vh;
-    background-position:center top;
-  }
+    body{
+  background:#f5f5f7;
 }
     body.dark{--bg:#101010;--card:#1c1c1e;--text:#f5f5f7;--muted:#aaa;--accent:#fff;--line:#303033}
     *{box-sizing:border-box} body{margin:0;
@@ -26,9 +23,44 @@
     nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:70px}
     .brand{font-weight:700;letter-spacing:-.5px}.controls{display:flex;gap:8px;flex-wrap:wrap}
     button,a{border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 14px;border-radius:999px;text-decoration:none;cursor:pointer}
-    .hero{padding:35px 0 70px}.eyebrow{color:var(--muted);font-size:14px}.hero h1{font-size:clamp(44px,8vw,92px);letter-spacing:-5px;line-height:.98;margin:18px 0}
+    .hero{
+  position:relative;
+  margin:0 -22px 70px;
+  padding:80px 22px 100px;
+  border-radius:0 0 40px 40px;
+  overflow:hidden;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.42)),
+    url("images/kitchen.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  color:white;
+}
+.hero .eyebrow,
+.hero h1,
+.hero p{
+  position:relative;
+  z-index:1;
+}
+
+.hero .eyebrow{
+  color:rgba(255,255,255,.75);
+}
+
+.hero p{
+  color:rgba(255,255,255,.85);
+}
+.eyebrow{color:var(--muted);font-size:14px}.hero h1{font-size:clamp(44px,8vw,92px);letter-spacing:-5px;line-height:.98;margin:18px 0}
     .hero p{max-width:540px;color:var(--muted);font-size:18px;line-height:1.5}
-    .primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+    .primary{
+  background:white;
+  color:#171717;
+  border-color:white;
+}
     
     section{
   position:relative;
@@ -240,5 +272,4 @@ function setLang(lang){document.querySelectorAll("[data]").forEach(el=>{const ke
 </script>
 </body>
 </html>
-
 
