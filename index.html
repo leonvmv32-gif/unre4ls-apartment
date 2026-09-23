@@ -233,7 +233,11 @@ html{
         <h2 data="apartmentTitle">О квартире</h2>
         <div class="grid">
           <article class="card"><div class="icon">📶</div><h3 data="wifi">Wi‑Fi</h3><p data="wifiText">Добавьте здесь название сети и пароль.</p></article>
-          <article class="card"><div class="icon">🔑</div><h3 data="rules">Инструкции</h3><p data="rulesText">Заселение, выезд, техника и правила проживания.</p></article>
+          <a class="card instruction-card" href="#instructions">
+            <div class="icon">🔑</div>
+            <h3>Инструкции</h3>
+            <p>Заселение, выезд, техника и правила проживания.</p>
+          </a>
           <article class="card"><div class="icon">💬</div><h3 data="contact">Связь с хозяином</h3><p data="contactText">Если что-то понадобится — напишите мне.</p><a href="mailto:leonvmv32@gmail.com" data="message">Написать ↗</a></article>
         </div>
       </section>
@@ -252,6 +256,26 @@ html{
       <section>
         <h2 data="recommendTitle">От хозяина</h2>
         <div class="notice" data="recommendText">Здесь будут ваши личные советы: любимый ресторан, лучший кофе, красивые места и полезные лайфхаки для гостей.</div>
+      </section>
+      <article class="card">
+      <div class="icon">🗑️</div>
+      <h3>Мусор</h3>
+      <p>
+        Пожалуйста, не оставляйте мусор в квартире надолго.
+        Используйте предназначенные для этого контейнеры.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🏠</div>
+      <h3>Правила дома</h3>
+      <p>
+        Просим соблюдать тишину и бережно относиться к квартире
+        и общему имуществу дома.
+      </p>
+    </article>
+
+  </div>
       </section>
       <section id="map">
         <h2>Карта</h2>
