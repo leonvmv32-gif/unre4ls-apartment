@@ -10,8 +10,8 @@
     *{box-sizing:border-box} body{margin:0;
   background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url("images/kitchen.jpg");
   background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
+  background-position:center top;
+  background-attachment:scroll;
   background-repeat:no-repeat;
   color:var(--text);
   font-family:Arial,Helvetica,sans-serif;
@@ -57,6 +57,28 @@
     height:260px;
   }
 }
+.quick-nav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:8px 0 18px;
+  margin-bottom:25px;
+  scrollbar-width:none;
+}
+
+.quick-nav::-webkit-scrollbar{
+  display:none;
+}
+html{
+  scroll-behavior:smooth;
+}
+.quick-nav a{
+  flex:0 0 auto;
+  padding:9px 13px;
+  font-size:14px;
+  white-space:nowrap;
+  background:var(--card);
+}
     @media(max-width:600px){nav{margin-bottom:35px}.hero h1{letter-spacing:-2px}.hero{padding-top:10px}}
   </style>
 </head>
@@ -69,6 +91,16 @@
         <button onclick="document.body.classList.toggle('dark')" aria-label="Toggle dark mode">◐</button>
       </div>
     </nav>
+    <div class="quick-nav">
+     <a href="#guide">Рядом</a>
+     <a href="#apartment">Квартира</a>
+     <a href="#photos">Фото</a>
+     <a href="#instructions">Инструкции</a>
+     <a href="#rules">Правила</a>
+     <a href="#services">Услуги</a>
+     <a href="#map">Карта</a>
+     <a href="#contact">Контакты</a>
+   </div>
 
     <main>
       <div class="hero">
@@ -106,7 +138,7 @@
     <img src="images/bathroom.jpg" alt="Ванная">
   </div>
      </section>
-
+     
       <section>
         <h2 data="recommendTitle">От хозяина</h2>
         <div class="notice" data="recommendText">Здесь будут ваши личные советы: любимый ресторан, лучший кофе, красивые места и полезные лайфхаки для гостей.</div>
