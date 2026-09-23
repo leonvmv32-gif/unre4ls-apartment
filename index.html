@@ -190,7 +190,30 @@ html{
     body.dark section::before{
   background:rgba(0,0,0,.55);
 }
+.contact-card{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+  transition:transform .25s, box-shadow .25s;
+}
+
+.contact-card:hover{
+  transform:translateY(-3px);
+}
+
+.contact-card:active{
+  transform:scale(.98);
+}
+
+.contact-card span{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--text);
+  font-weight:600;
+}
   </style>
+ 
 </head>
 <body>
   <div class="wrap">
@@ -238,7 +261,12 @@ html{
             <h3>Инструкции</h3>
             <p>Заселение, выезд, техника и правила проживания.(кликабельно)</p>
           </a>
-          <article class="card"><div class="icon">💬</div><h3 data="contact">Связь с хозяином</h3><p data="contactText">Если что-то понадобится — напишите мне.</p><a href="mailto:leonvmv32@gmail.com" data="message">Написать ↗</a></article>
+          <a class="card contact-card" href="#contact">
+  <div class="icon">💬</div>
+  <h3>Связь с хозяином</h3>
+  <p>Если что-то понадобится — здесь вы найдёте все способы связи.</p>
+  <span>Связаться ↗</span>
+</a>
         </div>
       </section>
 
@@ -312,6 +340,34 @@ html{
         Просим соблюдать тишину и бережно относиться к квартире
         и общему имуществу дома.
       </p>
+    </article>
+
+  </div>
+</section>
+<section id="contact">
+  <h2>Связь с хозяином</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="icon">📧</div>
+      <h3>Почта</h3>
+      <p>Если вам удобнее связаться по электронной почте:</p>
+      <a href="mailto:rikka81@mail.ru">rikka81@mail.ru ↗</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">✈️</div>
+      <h3>Telegram</h3>
+      <p>Для быстрой связи напишите мне в Telegram.</p>
+      <a href="https://t.me/Unre4l018" target="_blank">Открыть Telegram ↗</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">💬</div>
+      <h3>MAX</h3>
+      <p>Также со мной можно связаться через MAX.</p>
+      <a href="#" target="_blank">Написать в MAX ↗</a>
     </article>
 
   </div>
