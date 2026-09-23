@@ -253,11 +253,50 @@ html{
   </div>
      </section>
      
-      <section>
-        <h2 data="recommendTitle">От хозяина</h2>
-        <div class="notice" data="recommendText">Здесь будут ваши личные советы: любимый ресторан, лучший кофе, красивые места и полезные лайфхаки для гостей.</div>
-      </section>
-      <article class="card">
+      <section id="instructions">
+  <h2>Инструкции</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="icon">🔑</div>
+      <h3>Заезд и выезд</h3>
+      <p>
+        Заезд — с <strong>14:00</strong>.<br>
+        Выезд — до <strong>12:00</strong>.
+      </p>
+      <p>
+        Ранний заезд и поздний выезд возможны по предварительной договорённости.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">📋</div>
+      <h3>Условия размещения</h3>
+      <p>
+        Для заселения необходимы паспорт и договор.
+      </p>
+      <p>
+        Предоплата — <strong>30%</strong>.<br>
+        Залог — <strong>3000 ₽</strong>.
+      </p>
+      <p>
+        Базовая стоимость указана для проживания <strong>2 человек</strong>.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="icon">📺</div>
+      <h3>Техника</h3>
+      <p>
+        В квартире доступны Smart TV, индукционная плита и кондиционер.
+      </p>
+      <p>
+        Пожалуйста, используйте технику аккуратно и после использования выключайте её.
+      </p>
+    </article>
+
+    <article class="card">
       <div class="icon">🗑️</div>
       <h3>Мусор</h3>
       <p>
@@ -276,7 +315,7 @@ html{
     </article>
 
   </div>
-      </section>
+</section>
       <section id="map">
         <h2>Карта</h2>
         <div class="notice">
@@ -306,3 +345,4 @@ function setLang(lang){document.querySelectorAll("[data]").forEach(el=>{const ke
 </script>
 </body>
 </html>
+
